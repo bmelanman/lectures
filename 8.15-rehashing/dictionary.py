@@ -38,12 +38,12 @@ def insert(dct, key, value):
     #     Save the old array in a temporary variable.
     #     Set the dictionary's array to the new array.
     #     For i from 0 to the old capacity, do:
-    #         Start with the current node being the head at index i in the
-    #          temporary array.
+    #         Start with the current node being the head, index i, temp array.
     #         While the current node is not None, do:
     #             NOTE: Since we have already increased the capacity, this
     #                   recursive call won't ever recursively rehash again.
     #             Re-insert the current node's key, value into the dictionary.
+    #             Set the current node to the current node's next.
 
     # Hash the given key and mod it by the capacity.
     # If the head at that hash code is None, then:
