@@ -32,6 +32,19 @@ def get(dct, key):
 
 
 def insert(dct, key, value):
+    # If the size equals the capacity (if the load factor == 1), then:
+    #     Double the capacity and then increment it by one.
+    #     Create a new array with the new capacity.
+    #     Save the old array in a temporary variable.
+    #     Set the dictionary's array to the new array.
+    #     For i from 0 to the old capacity, do:
+    #         Start with the current node being the head at index i in the
+    #          temporary array.
+    #         While the current node is not None, do:
+    #             NOTE: Since we have already increased the capacity, this
+    #                   recursive call won't ever recursively rehash again.
+    #             Re-insert the current node's key, value into the dictionary.
+
     # Hash the given key and mod it by the capacity.
     # If the head at that hash code is None, then:
     #     Create a new node containing the given key-value pair.
