@@ -26,4 +26,23 @@ def add_edge(graph, vertex_u, vertex_v):
 
 
 def path(graph, vertex_u, vertex_v):
+    # Create an empty queue of jobs.
+    # Enqueue vertex_u to the queue of jobs.
+    # Create an empty dictionary of predecessors.
+    # Insert (vertex_u, vertex_u) into the dictionary of predecessors.
+    # While the queue of jobs is non-empty, do:
+    #     Dequeue a current vertex from the queue of jobs.
+    #     If the current vertex is vertex_v, then:
+    #         (the path to vertex_v is in the dictionary; return it)
+    #     Get the current vertex's dictionary from the matrix.
+    #     For each key (a neighbor) in the current vertex's dictionary, do:
+    #         If the neighbor is not in the dictionary of predecessors, then:
+    #             Enqueue the neighbor to the queue of jobs.
+    #             Insert (neighbor, current) into the dictionary.
+    #
+    # NOTE: Once the queue of jobs is empty, we have explored all vertices
+    #       that could be reached from vertex_u -- note that this does not
+    #       necessarily mean we actually reached vertex_v.
+    #
+    # (there is no path to vertex_v)
     pass
